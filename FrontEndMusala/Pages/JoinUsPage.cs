@@ -14,9 +14,7 @@ namespace FrontEndMusala.Pages
             this.driver = driver;
         }
         private IWebElement LocationDropdownMenu => driver.FindElement(By.XPath("/html/body/main/div/div/section/div[1]/select"));
-        private IWebElement FindJobByName => driver.FindElement(By.XPath("/html/body/main/div/div/section")).FindElement(By.XPath("//*[contains(., 'Experienced Automation QA Engineer')]"));
-        private IWebElement Mobile => driver.FindElement(By.XPath("/html/body/div[8]/div/div[9]/div/div/div/form/p[3]/span/input"));
-        private IWebElement Subject => driver.FindElement(By.XPath("/html/body/div[8]/div/div[9]/div/div/div/form/p[4]/span/input"));
+        private IWebElement FindJobByNameExperiencedQAEngineer => driver.FindElement(By.XPath("/html/body/main/div/div/section")).FindElement(By.XPath("//*[contains(., 'Experienced Automation QA Engineer')]"));
 
 
         public bool VerifyJoinUsPageIsOpen()
@@ -27,14 +25,20 @@ namespace FrontEndMusala.Pages
             }
             else return false;
         }
-        public void SelectLocation(string Location)
+        public void SelectLocation(string location)
         {
             var selectLocation = new OpenQA.Selenium.Support.UI.SelectElement(LocationDropdownMenu);
-            selectLocation.SelectByText(Location);
+            selectLocation.SelectByText(location);
         }
         public void ClickJobByName()
         {
-            FindJobByName.Click();
+            FindJobByNameExperiencedQAEngineer.Click();
+        }
+        public void GetAllJobsInListByLocation(string location)
+        {
+            var selectLocation = new OpenQA.Selenium.Support.UI.SelectElement(LocationDropdownMenu);
+            selectLocation.SelectByText(location);
+
         }
     }
 }
