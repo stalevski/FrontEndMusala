@@ -55,6 +55,12 @@ namespace FrontEndMusala.Pages
             Email.SendKeys(email);
 
         }
+        public void EnterEmail()
+        {
+            Email.Click();
+            Email.SendKeys("incorrect@email");
+
+        }
         public void EnterMobile(string mobile)
         {
             Mobile.Click();
@@ -63,7 +69,7 @@ namespace FrontEndMusala.Pages
         public void EnterCVLocation()
         {
             UploadYourCv.Click();
-            UploadYourCv.SendKeys("C: // Fake ");
+            UploadYourCv.SendKeys("C: // DoesNotExist ");
         }
         public void EnterLinkedInLink()
         {
