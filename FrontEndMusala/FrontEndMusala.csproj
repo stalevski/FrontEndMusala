@@ -138,6 +138,7 @@
     <Compile Include="Pages\BasePage.cs" />
     <Compile Include="Pages\CareersPage.cs" />
     <Compile Include="Pages\CompanyPage.cs" />
+    <Compile Include="Pages\ExperiencedQAPage.cs" />
     <Compile Include="Pages\HomePage.cs" />
     <Compile Include="Pages\JoinUsPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
