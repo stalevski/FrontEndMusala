@@ -14,7 +14,7 @@ namespace FrontEndMusala.Pages
             this.driver = driver;
         }
         private IWebElement LocationDropdownMenu => driver.FindElement(By.XPath("/html/body/main/div/div/section/div[1]/select"));
-        private IWebElement FindJobByName => driver.FindElement(By.XPath("/html/body/main/div/div/section")).FindElement(By.XPath("//*[contains(., 'Experienced Automation QA Engineer')]");
+        private IWebElement FindJobByName => driver.FindElement(By.XPath("/html/body/main/div/div/section")).FindElement(By.XPath("//*[contains(., 'Experienced Automation QA Engineer')]"));
         private IWebElement Mobile => driver.FindElement(By.XPath("/html/body/div[8]/div/div[9]/div/div/div/form/p[3]/span/input"));
         private IWebElement Subject => driver.FindElement(By.XPath("/html/body/div[8]/div/div[9]/div/div/div/form/p[4]/span/input"));
 
