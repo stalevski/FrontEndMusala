@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using System.Collections.Generic;
 
 namespace FrontEndMusala.Pages
 {
@@ -9,12 +10,12 @@ namespace FrontEndMusala.Pages
             this.driver = driver;
         }
         private IWebElement LocationDropdownMenu => driver.FindElement(By.XPath("/html/body/main/div/div/section/div[1]/select"));
-        private IWebElement FindJobByNameExperiencedQAEngineer => driver.FindElement(By.XPath("/html/body/main/div/div/section")).FindElement(By.XPath("//*[contains(., 'Experienced Automation QA Engineer')]"));
+        private IList<IWebElement> FindJobByNameExperiencedQAEngineer => driver.FindElements(By.LinkText("Experienced Automation QA Engineer"));
 
 
         public bool VerifyJoinUsPageIsOpen()
         {
-            if (driver.Url.Equals("https://www.musala.com/careers/join-us/"))
+            if (driver.Url.Contains("www.musala.com/careers/join-us/"))
             {
                 return true;
             }
@@ -30,7 +31,7 @@ namespace FrontEndMusala.Pages
         }
         public void ClickJobByName()
         {
-            FindJobByNameExperiencedQAEngineer.Click();
+            var net = FindJobByNameExperiencedQAEngineer;
         }
         public void GetAllJobsInListByLocation(string location)
         {

@@ -28,7 +28,6 @@ namespace FrontEndMusala.Tests
             companyPage = homePage.GoToCompanyPage();
             companyPage.LeadershipSectionExists();
             facebookPage = companyPage.ClickFacebookButon();
-            //Thread.Sleep(5000);
             driver.SwitchTo().Window(driver.WindowHandles[1]);
             facebookPage
                 .AssertDriverUrlIsCorrect()
@@ -43,6 +42,8 @@ namespace FrontEndMusala.Tests
 
             Assert.NotNull(joinUsPageIsOpen, "Join us page is not open");
 
+            joinUsPage.SelectLocation("Anywhere");
+            joinUsPage.ClickJobByName();
 
         }
     }
