@@ -21,7 +21,7 @@ namespace FrontEndMusala.Tests
         [Test]
         public static void FirstTest()
         {
-            HomePage homePage = new HomePage(driver);
+            //HomePage homePage = new HomePage(driver);
             
         }
 
