@@ -13,7 +13,7 @@ namespace FrontEndMusala.Pages
         {
             this.driver = driver;
         }
-        private IWebElement FacebookProfilePicutre => driver.FindElement(By.XPath("/html/body/div[1]/div/div[1]/div/div[3]/div/div/div[1]/div[1]/div[1]/div[2]/div/div/div/div[1]/div/div/a/div/svg/g/image"));
+        private IWebElement FacebookProfilePicutre => driver.FindElement(By.XPath("/html/body/div[1]/div/div[1]/div/div[3]/div/div/div[1]/div[1]/div[1]/div[2]/div/div/div/div[1]/div/div/a/div/div"));
         public bool VerifyFacebookLink()
         {
             if (driver.Url.Equals("https://www.facebook.com/MUFFINconference/"))

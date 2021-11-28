@@ -22,7 +22,7 @@ namespace FrontEndMusala.Tests
         [TearDown]
         public void closeBrowser()
         {
-            driver.Close();
+            driver.Quit();
         }
     }
 }
