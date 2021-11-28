@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Framework;
+using OpenQA.Selenium;
 
 namespace FrontEndMusala.Pages
 {
@@ -9,12 +10,13 @@ namespace FrontEndMusala.Pages
             this.driver = driver;
         }
         private IWebElement LeadershipSection => driver.FindElement(By.CssSelector("#content > div.entry-content > section.company-members"));
-        private IWebElement FacebookButton => driver.FindElement(By.CssSelector("body > footer > div > div > a:nth-child(5)"));
+        private IWebElement FacebookButton => driver.FindElement(By.XPath("/html/body/footer/div/div/a[4]/span"));
 
 
-        public bool LeadershipSectionExists()
+        public CompanyPage LeadershipSectionExists()
         {
-            return LeadershipSection.Displayed;
+            Assert.NotNull(LeadershipSection.Displayed);
+            return this;
         }
         public FacebookPage ClickFacebookButon()
         {

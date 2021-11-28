@@ -61,8 +61,9 @@ C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\bin\Debug\System.
 C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\bin\Debug\System.ValueTuple.xml
 C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\bin\Debug\TimeZoneConverter.xml
-C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\obj\Debug\FrontEndMusala.csproj.AssemblyReference.cache
 C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\obj\Debug\FrontEndMusala.csproj.CoreCompileInputs.cache
 C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\obj\Debug\FrontEndMusala.dll
 C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\obj\Debug\FrontEndMusala.pdb
 C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\bin\Debug\SeleniumExtras.PageObjects.dll
+C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\obj\Debug\FrontEndMusala.csprojAssemblyReference.cache
+C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\obj\Debug\FrontEndMusala.csproj.CopyComplete

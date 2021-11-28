@@ -1,7 +1,6 @@
-﻿using FrontEndMusala.Pages;
-using NUnit.Framework;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
+﻿using NUnit.Framework;
+using System.Collections.Generic;
+using System.Threading;
 
 namespace FrontEndMusala.Tests
 {
@@ -11,58 +10,40 @@ namespace FrontEndMusala.Tests
         [Test]
         public static void FirstTest()
         {
-            HomePage homePage = new HomePage(driver);
             homePage
                 .ClickContactUsButton()
-                .EnterName("random")
+                .EnterName("EKLhoemdEL")
                 .EnterEmail("wrong@email")
-                .EnterMobile("123123123")
-                .EnterSubject("asdasdasdas")
-                .EnterYourMessage("adasdasdad")
+                .EnterMobile("078333444")
+                .EnterSubject("eoqmtKWjBL")
+                .EnterYourMessage("XiXPsEpHdN")
                 .ClickIAmNotARobotCheckbox()
-                .ClickSendButtonInContactForm();
-
-            string errorMessage = homePage.GetErrorMessage();
-
-            Assert.AreEqual("The e-mail address entered is invalid.", errorMessage, "Error message for email is not displayed");
+                .ClickSendButtonInContactForm()
+                .VerifyErrorMessage();
         }
 
         [Test]
         public static void SecondTest()
         {
-            HomePage homePage = new HomePage(driver);
-            CompanyPage companyPage;
-            FacebookPage facebookPage;
-
-            homePage.GoToCompanyPage();
-            companyPage = new CompanyPage(driver);
-
-            bool exists = companyPage.LeadershipSectionExists();
-
-            companyPage.ClickFacebookButon();
-            facebookPage = new FacebookPage(driver);
-            bool facebookLink = facebookPage.VerifyFacebookLink();
-            bool facebookPicture = facebookPage.VerifyFacebookProfilePictureIsDisplayed();
-
-            Assert.Multiple(() =>
-            {
-                Assert.IsNotNull(exists, "Leadership section does not exist");
-                Assert.NotNull(facebookLink);
-                Assert.NotNull(facebookPicture);
-            });
-            
+            companyPage = homePage.GoToCompanyPage();
+            companyPage.LeadershipSectionExists();
+            facebookPage = companyPage.ClickFacebookButon();
+            //Thread.Sleep(5000);
+            driver.SwitchTo().Window(driver.WindowHandles[1]);
+            facebookPage
+                .AssertDriverUrlIsCorrect()
+                .AssertFacebookProfilePictureIsDisplayed();
         }
         [Test]
         public static void ThirdTest()
         {
-            HomePage homePage = new HomePage(driver);
-            CareersPage careersPage;
-            JoinUsPage joinUsPage;
-            homePage.GoToCareersPage();
-            careersPage = new CareersPage(driver);
-            careersPage.ClickCheckOpenPositionsButton();
-            joinUsPage = new JoinUsPage(driver);
-            joinUsPage.VerifyJoinUsPageIsOpen();
+            careersPage = homePage.GoToCareersPage();
+            joinUsPage = careersPage.ClickCheckOpenPositionsButton();
+            bool joinUsPageIsOpen = joinUsPage.VerifyJoinUsPageIsOpen();
+
+            Assert.NotNull(joinUsPageIsOpen, "Join us page is not open");
+
+
         }
     }
 }

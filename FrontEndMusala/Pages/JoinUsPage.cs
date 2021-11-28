@@ -1,9 +1,4 @@
 ﻿using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FrontEndMusala.Pages
 {
@@ -23,11 +18,14 @@ namespace FrontEndMusala.Pages
             {
                 return true;
             }
-            else return false;
+            else
+            {
+                return false;
+            }
         }
         public void SelectLocation(string location)
         {
-            var selectLocation = new OpenQA.Selenium.Support.UI.SelectElement(LocationDropdownMenu);
+            OpenQA.Selenium.Support.UI.SelectElement selectLocation = new OpenQA.Selenium.Support.UI.SelectElement(LocationDropdownMenu);
             selectLocation.SelectByText(location);
         }
         public void ClickJobByName()
@@ -36,7 +34,7 @@ namespace FrontEndMusala.Pages
         }
         public void GetAllJobsInListByLocation(string location)
         {
-            var selectLocation = new OpenQA.Selenium.Support.UI.SelectElement(LocationDropdownMenu);
+            OpenQA.Selenium.Support.UI.SelectElement selectLocation = new OpenQA.Selenium.Support.UI.SelectElement(LocationDropdownMenu);
             selectLocation.SelectByText(location);
         }
     }

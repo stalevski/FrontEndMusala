@@ -1,5 +1,5 @@
-﻿using OpenQA.Selenium;
-using System.Configuration;
+﻿using NUnit.Framework;
+using OpenQA.Selenium;
 
 namespace FrontEndMusala.Pages
 {
@@ -50,8 +50,8 @@ namespace FrontEndMusala.Pages
         {
             Mobile.Click();
             Mobile.SendKeys(mobile);
-        return this;
-    }
+            return this;
+        }
         public HomePage EnterSubject(string subject)
         {
             Subject.Click();
@@ -74,9 +74,10 @@ namespace FrontEndMusala.Pages
             ContactUsSendButton.Click();
             return this;
         }
-        public string GetErrorMessage()
+        public HomePage VerifyErrorMessage()
         {
-            return ErrorMessage.Text;
+            Assert.AreEqual("The e-mail address entered is invalid.", ErrorMessage.Text, "Error message for email is not displayed");
+            return this;
         }
         public CompanyPage GoToCompanyPage()
         {

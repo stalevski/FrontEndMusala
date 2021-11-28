@@ -1,9 +1,4 @@
 ﻿using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FrontEndMusala.Pages
 {
@@ -38,7 +33,10 @@ namespace FrontEndMusala.Pages
             {
                 return true;
             }
-            else return false;
+            else
+            {
+                return false;
+            }
         }
         public void ClickApplyButton()
         {
@@ -95,7 +93,10 @@ namespace FrontEndMusala.Pages
             {
                 return true;
             }
-            else return false;
+            else
+            {
+                return false;
+            }
         }
         public void ClickErrorCloseButtonInApplyForm()
         {
@@ -107,7 +108,10 @@ namespace FrontEndMusala.Pages
             {
                 return true;
             }
-            else return false;
+            else
+            {
+                return false;
+            }
         }
     }
 }
