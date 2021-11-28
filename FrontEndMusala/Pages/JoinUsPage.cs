@@ -38,7 +38,6 @@ namespace FrontEndMusala.Pages
         {
             var selectLocation = new OpenQA.Selenium.Support.UI.SelectElement(LocationDropdownMenu);
             selectLocation.SelectByText(location);
-
         }
     }
 }

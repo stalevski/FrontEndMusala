@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using System.Configuration;
 
 namespace FrontEndMusala.Pages
 {
@@ -8,7 +9,6 @@ namespace FrontEndMusala.Pages
         {
             this.driver = driver;
         }
-
         private IWebElement ContactUsButton => driver.FindElement(By.CssSelector("body > main > section.contacts > div > div > div > a.fancybox > button"));
         private IWebElement Name => driver.FindElement(By.XPath("/html/body/div[8]/div/div[9]/div/div/div/form/p[1]/span/input"));
         private IWebElement Email => driver.FindElement(By.XPath("/html/body/div[8]/div/div[9]/div/div/div/form/p[2]/span/input"));
@@ -18,6 +18,8 @@ namespace FrontEndMusala.Pages
         private IWebElement ImNotARobotCheckbox => driver.FindElement(By.CssSelector("#rc-anchor-container > div.rc-anchor-content > div:nth-child(1) > div"));
         private IWebElement ContactUsSendButton => driver.FindElement(By.CssSelector("#wpcf7-f875-o1 > form > div.btn-cf-wrapper > p > input"));
         private IWebElement ErrorMessage => driver.FindElement(By.CssSelector("/html/body/div[8]/div/div[9]/div/div/div/form/p[2]/span/span"));
+        private IWebElement CompanyPageButton => driver.FindElement(By.CssSelector("#menu-main-nav-1 > li.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-887 > a"));
+        private IWebElement CareersPageButton => driver.FindElement(By.CssSelector("#menu-main-nav-1 > li.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-478 > a"));
 
         public void ClickContactUsButton()
         {
@@ -66,6 +68,16 @@ namespace FrontEndMusala.Pages
         public string GetErrorMessage()
         {
             return ErrorMessage.Text;
+        }
+        public CompanyPage GoToCompanyPage()
+        {
+            CompanyPageButton.Click();
+            return new CompanyPage(driver);
+        }
+        public CareersPage GoToCareersPage()
+        {
+            CompanyPageButton.Click();
+            return new CareersPage(driver);
         }
     }
 }

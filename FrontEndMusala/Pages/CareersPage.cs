@@ -10,9 +10,10 @@ namespace FrontEndMusala.Pages
         }
         private IWebElement CheckOpenPositionsButton => driver.FindElement(By.CssSelector("body > main > section.contacts > div > div > div > a.fancybox > button"));
 
-        public void ClickCheckOpenPositionsButton()
+        public JoinUsPage ClickCheckOpenPositionsButton()
         {
             CheckOpenPositionsButton.Click();
+            return new JoinUsPage(driver);
         }
     }
 }
