@@ -1,27 +1,28 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Firefox;
 using System.Configuration;
+
 
 namespace FrontEndMusala.Tests
 {
     public class BaseTest
     {
-        //public IWebDriver driver;
-        ////public string MusalaUrl = ConfigurationManager.AppSettings["MusalaHomePageUrl"];
+        public IWebDriver driver;
+        //public string MusalaUrl = ConfigurationManager.AppSettings["MusalaHomePageUrl"];
 
-        //[SetUp]
-        //public void startBrowser()
-        //{
-        //    driver = new ChromeDriver();
-        //    driver.Url = "https://www.musala.com/";
-        //}
+        [SetUp]
+        public void startBrowser()
+        {
+            //driver = new ChromeDriver();
+            //driver.Url = "https://www.musala.com/";
+        }
 
-        //[TearDown]
-        //public void closeBrowser()
-        //{
-        //    driver.Close();
-        //}
-
+        [TearDown]
+        public void closeBrowser()
+        {
+            driver.Close();
+        }
     }
 }

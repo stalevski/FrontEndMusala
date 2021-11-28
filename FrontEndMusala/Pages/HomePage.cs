@@ -15,55 +15,64 @@ namespace FrontEndMusala.Pages
         private IWebElement Mobile => driver.FindElement(By.XPath("/html/body/div[8]/div/div[9]/div/div/div/form/p[3]/span/input"));
         private IWebElement Subject => driver.FindElement(By.XPath("/html/body/div[8]/div/div[9]/div/div/div/form/p[4]/span/input"));
         private IWebElement YourMessage => driver.FindElement(By.XPath("/html/body/div[8]/div/div[9]/div/div/div/form/p[5]/span/textarea"));
-        private IWebElement ImNotARobotCheckbox => driver.FindElement(By.CssSelector("#rc-anchor-container > div.rc-anchor-content > div:nth-child(1) > div"));
+        private IWebElement ImNotARobotCheckbox => driver.FindElement(By.CssSelector("#recaptcha-anchor > div.recaptcha-checkbox-checkmark"));
         private IWebElement ContactUsSendButton => driver.FindElement(By.CssSelector("#wpcf7-f875-o1 > form > div.btn-cf-wrapper > p > input"));
         private IWebElement ErrorMessage => driver.FindElement(By.CssSelector("/html/body/div[8]/div/div[9]/div/div/div/form/p[2]/span/span"));
         private IWebElement CompanyPageButton => driver.FindElement(By.CssSelector("#menu-main-nav-1 > li.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-887 > a"));
         private IWebElement CareersPageButton => driver.FindElement(By.CssSelector("#menu-main-nav-1 > li.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-478 > a"));
 
-        public void ClickContactUsButton()
+        public HomePage ClickContactUsButton()
         {
             ContactUsButton.Click();
+            return this;
         }
-        public void EnterName(string name)
+        public HomePage EnterName(string name)
         {
             Name.Click();
             Name.SendKeys(name);
+            return this;
         }
-        public void EnterEmail(string email)
+        public HomePage EnterEmail(string email)
         {
             Email.Click();
             Email.SendKeys(email);
+            return this;
 
         }
-        public void EnterEmail()
+        public HomePage EnterEmail()
         {
             Email.Click();
             Email.SendKeys("incorrect@email");
+            return this;
 
         }
-        public void EnterMobile(string mobile)
+        public HomePage EnterMobile(string mobile)
         {
             Mobile.Click();
             Mobile.SendKeys(mobile);
-        }
-        public void EnterSubject(string subject)
+        return this;
+    }
+        public HomePage EnterSubject(string subject)
         {
             Subject.Click();
             Subject.SendKeys(subject);
+            return this;
         }
-        public void EnterYourMessage(string yourMessage)
+        public HomePage EnterYourMessage(string yourMessage)
         {
             YourMessage.Click();
             YourMessage.SendKeys(yourMessage);
+            return this;
         }
-        public void ClickIAmNotARobotCheckbox()
+        public HomePage ClickIAmNotARobotCheckbox()
         {
             ImNotARobotCheckbox.Click();
+            return this;
         }
-        public void ClickSendButtonInContactForm()
+        public HomePage ClickSendButtonInContactForm()
         {
             ContactUsSendButton.Click();
+            return this;
         }
         public string GetErrorMessage()
         {
@@ -76,7 +85,7 @@ namespace FrontEndMusala.Pages
         }
         public CareersPage GoToCareersPage()
         {
-            CompanyPageButton.Click();
+            CareersPageButton.Click();
             return new CareersPage(driver);
         }
     }

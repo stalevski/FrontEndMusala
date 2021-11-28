@@ -1,4 +1,3 @@
-C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\bin\Debug\Aspose.Cells.dll
 C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\bin\Debug\NUnit3.TestAdapter.dll
 C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\bin\Debug\NUnit3.TestAdapter.pdb
 C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\bin\Debug\nunit.engine.dll
@@ -8,6 +7,7 @@ C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\bin\Debug\testcen
 C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\bin\Debug\FrontEndMusala.dll.config
 C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\bin\Debug\FrontEndMusala.dll
 C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\bin\Debug\FrontEndMusala.pdb
+C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\bin\Debug\Aspose.Cells.dll
 C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\bin\Debug\CsvHelper.dll
 C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\bin\Debug\DotNetZip.dll
 C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\bin\Debug\FluentAssertions.dll
@@ -61,7 +61,8 @@ C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\bin\Debug\System.
 C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\bin\Debug\System.ValueTuple.xml
 C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\bin\Debug\TimeZoneConverter.xml
+C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\obj\Debug\FrontEndMusala.csproj.AssemblyReference.cache
 C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\obj\Debug\FrontEndMusala.csproj.CoreCompileInputs.cache
-C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\obj\Debug\FrontEndMusala.csproj.CopyComplete
 C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\obj\Debug\FrontEndMusala.dll
 C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\obj\Debug\FrontEndMusala.pdb
+C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\bin\Debug\SeleniumExtras.PageObjects.dll

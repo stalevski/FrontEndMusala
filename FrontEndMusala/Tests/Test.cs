@@ -6,29 +6,26 @@ using OpenQA.Selenium.Chrome;
 namespace FrontEndMusala.Tests
 {
     [TestFixture]
-    public class Test : BaseTest
+    public class Test
     {
-        IWebDriver driver;
-        //public string MusalaUrl = ConfigurationManager.AppSettings["MusalaHomePageUrl"];
-
-        [SetUp]
-        public void Init()
-        {
-            driver = new ChromeDriver();
-            driver.Url = "https://www.musala.com/";
-        }
-
         [Test]
         public static void FirstTest()
         {
-            //HomePage homePage = new HomePage(driver);
-            
-        }
+            IWebDriver driver = new ChromeDriver();
+            driver.Url = "https://www.musala.com/";
 
-        [TearDown]
-        public void closeBrowser()
-        {
-            driver.Close();
+            HomePage homePage = new HomePage(driver);
+            homePage
+                .ClickContactUsButton()
+                .EnterName("random")
+                .EnterEmail("wrong@email")
+                .EnterMobile("123123123")
+                .EnterSubject("asdasdasdas")
+                .EnterYourMessage("adasdasdad")
+                .ClickIAmNotARobotCheckbox()
+                .ClickSendButtonInContactForm();
+
+            string error = homePage.GetErrorMessage();
         }
     }
 }
