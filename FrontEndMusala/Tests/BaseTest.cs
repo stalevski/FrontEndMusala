@@ -9,14 +9,14 @@ namespace FrontEndMusala.Tests
 {
     public class BaseTest
     {
-        public IWebDriver driver;
+        public static IWebDriver driver;
         //public string MusalaUrl = ConfigurationManager.AppSettings["MusalaHomePageUrl"];
 
         [SetUp]
         public void startBrowser()
         {
-            //driver = new ChromeDriver();
-            //driver.Url = "https://www.musala.com/";
+            driver = new ChromeDriver();
+            driver.Url = "https://www.musala.com/";
         }
 
         [TearDown]

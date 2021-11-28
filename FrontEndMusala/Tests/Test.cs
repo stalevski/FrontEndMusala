@@ -6,14 +6,11 @@ using OpenQA.Selenium.Chrome;
 namespace FrontEndMusala.Tests
 {
     [TestFixture]
-    public class Test
+    public class Test : BaseTest
     {
         [Test]
         public static void FirstTest()
         {
-            IWebDriver driver = new ChromeDriver();
-            driver.Url = "https://www.musala.com/";
-
             HomePage homePage = new HomePage(driver);
             homePage
                 .ClickContactUsButton()
@@ -25,7 +22,9 @@ namespace FrontEndMusala.Tests
                 .ClickIAmNotARobotCheckbox()
                 .ClickSendButtonInContactForm();
 
-            string error = homePage.GetErrorMessage();
+            string errorMessage = homePage.GetErrorMessage();
+
+            Assert.AreEqual("The e-mail address entered is invalid.", errorMessage, "Error message for email is not displayed");
         }
     }
 }
