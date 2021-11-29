@@ -1,10 +1,15 @@
 ﻿using NUnit.Framework;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Firefox;
 using System.Collections.Generic;
 using System.Threading;
 
 namespace FrontEndMusala.Tests
 {
     [TestFixture]
+    [Parallelizable(ParallelScope.All)]
+    [TestFixture(typeof(FirefoxDriver))]
+    [TestFixture(typeof(ChromeDriver))]
     public class Test : BaseTest
     {
         [Test]
