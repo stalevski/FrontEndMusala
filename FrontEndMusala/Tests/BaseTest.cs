@@ -2,7 +2,8 @@
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-
+using OpenQA.Selenium.Firefox;
+using System.Configuration;
 
 namespace FrontEndMusala.Tests
 {
@@ -15,11 +16,15 @@ namespace FrontEndMusala.Tests
         public static FacebookPage facebookPage;
         public static HomePage homePage;
         public static JoinUsPage joinUsPage;
-        //public string MusalaUrl = ConfigurationManager.AppSettings["MusalaHomePageUrl"];
+        //public string MusalaUrl = ConfigurationManager.AppSettings["MusalaUrl"];
 
         [SetUp]
         public void startBrowser()
         {
+            //driver = new FirefoxDriver
+            //{
+            //    Url = "https://www.musala.com/"
+            //};
             driver = new ChromeDriver
             {
                 Url = "https://www.musala.com/"

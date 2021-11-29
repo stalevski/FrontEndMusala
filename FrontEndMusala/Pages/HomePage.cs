@@ -18,7 +18,7 @@ namespace FrontEndMusala.Pages
         private IWebElement YourMessage => driver.FindElement(By.XPath("/html/body/div[8]/div/div[9]/div/div/div/form/p[5]/span/textarea"));
         private IWebElement ImNotARobotCheckbox => driver.FindElement(By.XPath("/html/body/div[2]"));
         private IWebElement ContactUsSendButton => driver.FindElement(By.CssSelector("#wpcf7-f875-o1 > form > div.btn-cf-wrapper > p > input"));
-        private IWebElement ErrorMessage => driver.FindElement(By.CssSelector("/html/body/div[8]/div/div[9]/div/div/div/form/p[2]/span/span"));
+        private IWebElement ErrorMessage => driver.FindElement(By.XPath("/html/body/div[8]/div/div[9]/div/div/div/form/p[2]/span/span"));
         private IWebElement CompanyPageButton => driver.FindElement(By.CssSelector("#menu-main-nav-1 > li.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-887 > a"));
         private IWebElement CareersPageButton => driver.FindElement(By.CssSelector("#menu-main-nav-1 > li.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-478 > a"));
 

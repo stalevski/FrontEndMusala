@@ -13,7 +13,7 @@ namespace FrontEndMusala.Pages
         private IList<IWebElement> FindJobByNameExperiencedQAEngineer => driver.FindElements(By.LinkText("Experienced Automation QA Engineer"));
 
 
-        public bool VerifyJoinUsPageIsOpen()
+        public bool CheckJoinUsPageIsOpen()
         {
             if (driver.Url.Contains("www.musala.com/careers/join-us/"))
             {

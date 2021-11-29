@@ -22,6 +22,7 @@ C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\bin\Debug\Pj.Libr
 C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\bin\Debug\Pj.Library.ThirdParty.dll
 C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\bin\Debug\Selenium.Essentials.Api.dll
 C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\bin\Debug\Selenium.Essentials.dll
+C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\bin\Debug\SeleniumExtras.PageObjects.dll
 C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\bin\Debug\System.Buffers.dll
 C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\bin\Debug\System.Configuration.ConfigurationManager.dll
 C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\bin\Debug\System.Memory.dll
@@ -64,6 +65,3 @@ C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\bin\Debug\TimeZon
 C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\obj\Debug\FrontEndMusala.csproj.CoreCompileInputs.cache
 C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\obj\Debug\FrontEndMusala.dll
 C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\obj\Debug\FrontEndMusala.pdb
-C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\bin\Debug\SeleniumExtras.PageObjects.dll
-C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\obj\Debug\FrontEndMusala.csprojAssemblyReference.cache
-C:\Users\Stefan\Documents\GitHub\FrontEndMusala\FrontEndMusala\obj\Debug\FrontEndMusala.csproj.CopyComplete
